@@ -1,0 +1,59 @@
+@import "./common.less";
+.pyg_view {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    .pv_left {
+        width: .8rem;
+        overflow: scroll;
+        ul {
+            .uiReset();
+            li {
+                height: .4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: .14rem;
+            }
+            .active {
+                background-color: #fff;
+                border-left: 2px solid #ff9040;
+            }
+        }
+    }
+    .pv_right {
+        flex: 1;
+        overflow: scroll;
+        background-color: #fff;
+        .pr_list {
+            .pr_title {
+                height: .4rem;
+                display: flex;
+                align-items: center;
+                font-size: .12rem;
+                color: blue;
+                padding-left: .1rem;
+            }
+            .pr_content {
+                .uiReset();
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 33.33%;
+                    a{
+                        img{
+                            width: 70%;
+                            margin: 0 auto;
+                        }
+                        span{
+                            color: #000;
+                            font-size: .14rem;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

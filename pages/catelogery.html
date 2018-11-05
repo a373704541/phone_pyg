@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="../css/catelogery.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <!-- 引入mui ui插件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <div class="pyg_view">
+        <div class="pv_left">
+            <ul>
+                <li class="active">菜单1</li>
+                <li>菜单2</li>
+            </ul>
+        </div>
+        <div class="pv_right">
+                 
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="pyg_nav">
+        <a href="javascript:;">
+            <span class="fa fa-home">
+
+            </span>
+            <div class="page_name">首页</div>
+        </a>
+        <a href="./pages/catelogery.html">
+            <span class="fa fa-list-ul ">
+
+            </span>
+            <div class="page_name">分类</div>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-shopping-cart"></span>
+            <div class="page_name">购物车</div>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-user-circle-o"></span>
+            <div class="page_name">我的</div>
+        </a>
+    </footer>
+</body>
+<!-- js文件 -->
+<!-- 引入zepto插件 -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- 引入原生模板 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- 引入mui js 文件  -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入主页 -->
+<script src="../js/catagelory.js"></script>
+<!-- 引入公共js -->
+<script src="../js/common.js"></script>
+
+
+<!-- 渲染左侧模板 -->
+<script type="text/html" id="catelogeryLeft"> 
+    {{each data val key}}
+        <li>{{val.cat_name}}</li>
+    {{/each}}
+</script>
+
+<!-- 渲染右侧模板 catelogeryRight -->
+<script type="text/html" id="catelogeryRight"> 
+    {{each data val key}}
+        {{each val.children val2 key2}}
+            <div class="pr_list">
+            <div class="pr_title">{{val2.cat_name}}</div>
+                <ul class="pr_content">
+                    {{each val2.children val3 key3}}
+                        <li>
+                            <a href="javascript:;">
+                                <img src="http://140.143.222.79:8888/{{val3.cat_icon}}" alt="">
+                                <span>{{val3.cat_name}}</span>
+                            </a>
+                        </li> 
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}     
+    {{/each}}
+</script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.min.css">
+    <!-- 引入mui ui插件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <!-- 轮播图 -->
+    <div class="pyg_slides">
+        <div class="mui-slider">
+
+        </div>
+    </div>
+
+    <!-- 分类菜单 -->
+    <div class="pyg_cataglory">
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="goodsList">
+    </div>
+
+    <!-- 底部 -->
+    <footer class="pyg_nav">
+        <a href="javascript:;">
+            <span class="fa fa-home">
+                    
+            </span>
+            <div class="page_name">首页</div>
+        </a>
+        <a href="./pages/catelogery.html">
+            <span class="fa fa-list-ul ">
+                
+            </span>
+            <div class="page_name">分类</div>    
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-shopping-cart"></span>
+            <div class="page_name">购物车</div>     
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-user-circle-o"></span>
+            <div class="page_name">我的</div>     
+        </a>
+    </footer>
+</body>
+<!-- js文件 -->
+<!-- 引入zepto插件 -->
+<script src="./lib/zepto/zepto.js"></script>
+<!-- 引入原生模板 -->
+<script src="./lib/arttemplate/template-web.js"></script>
+<!-- 引入mui js 文件  -->
+<script src="./lib/mui/js/mui.js"></script>
+<!-- 引入主页 -->
+<script src="./js/index.js"></script>
+<!-- 引入公共js -->
+<script src="./js/common.js"></script>
+
+<!-- 輪播模板 -->
+<script type="text/html" id="slidesTemp">
+    <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[data.length-1].image_src}}" /></a></div>
+        {{each data val key}}
+            <div class="mui-slider-item"><a href="#"><img src={{val.image_src}} /></a></div>
+        {{/each}} 
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[0].image_src}}" /></a></div>
+    </div>
+    <div class="mui-slider-indicator">
+        {{each data val key}}
+            {{if key == 0}}
+            <div class="mui-indicator mui-active"></div>
+            {{/if}}
+            {{if key != 0}}
+            <div class="mui-indicator"></div>
+            {{/if}}
+        {{/each}}
+    </div>
+</script>
+
+<!-- 分类菜单模板 -->
+<script type="text/html" id="catagloryTemp">
+    {{each data val key}}
+    <a href="javascript:;">
+        <img src="{{val.image_src}}" alt="">
+    </a>
+    {{/each}}
+</script>
+
+<!-- 商品列表模板 -->
+<script type="text/html" id="goodsListTemp">
+    {{each data val1 key1 }}
+    <div class="gl_title">
+        <img src="{{val1.group_img}}" alt="">
+    </div>
+    <ul class="gl_content">
+        {{each val1.goods val2 key2}}
+            <li>
+                <a href="javascript:;" class="gl_wrap">
+                    <img src="{{val2.goods_small_logo}}"
+                        alt="">
+                    <p class="gl_text">{{val2.goods_name}}</p>
+                    <span class="gl_price">￥{{val2.goods_price}}</span>
+                </a>
+                <a class=" gl_like mui-btn mui-btn-primary mui-btn-outlined">蓝色</a>
+            </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</script>
+
+</html>
+<script>
+        
+</script>

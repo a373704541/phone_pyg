@@ -1,0 +1,36 @@
+{
+    "group_img": "http://image4.suning.cn/uimg/cms/img/149559219946350066.png",
+    "goods": [{
+                "goods_id": 18539,
+                "goods_name": "海瞳 圆润 强光 珍珠项链 近正圆 淡水珍珠项链 送妈妈",
+                "goods_price": 258,
+                "goods_big_logo": "http://image2.suning.cn/uimg/b2c/newcatentries/0070124519-000000000139863117_2_800x800.jpg",
+                "goods_small_logo": "http://image2.suning.cn/uimg/b2c/newcatentries/0070124519-000000000139863117_2_400x400.jpg",
+                "cat_id": 1317
+                },
+                {
+                    "goods_id": 52504,
+                    "goods_name": "五羊bibi致薄瞬吸干爽婴儿纸尿裤66片 尿不湿M号中码【6-11KG】",
+                    "goods_price": 89,
+                    "goods_big_logo": "http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000628425491_1_800x800.jpg",
+                    "goods_small_logo": "http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000628425491_1_400x400.jpg",
+                    "cat_id": 843
+                },
+                {
+                    "goods_id": 11912,
+                    "goods_name": "ABC女性护理卫生护垫劲吸量多型棉柔表层163mm22片装",
+                    "goods_price": 7,
+                    "goods_big_logo": "http://image1.suning.cn/uimg/b2c/newcatentries/0070150934-000000000615427867_1_800x800.jpg",
+                    "goods_small_logo": "http://image1.suning.cn/uimg/b2c/newcatentries/0070150934-000000000615427867_1_400x400.jpg",
+                    "cat_id": 1149
+                },
+                {
+                    "goods_id": 34711,
+                    "goods_name": "【中华特色】龙岩馆 远山农业 莆田桂圆肉500g 桂圆肉干 袋装龙眼干 龙眼肉",
+                    "goods_price": 46,
+                    "goods_big_logo": "http://image5.suning.cn/uimg/b2c/newcatentries/0070070727-000000000129525114_1_800x800.jpg",
+                    "goods_small_logo": "http://image5.suning.cn/uimg/b2c/newcatentries/0070070727-000000000129525114_1_400x400.jpg",
+                    "cat_id": 400
+                }
+            ]
+        }

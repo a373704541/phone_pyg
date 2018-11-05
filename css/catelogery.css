@@ -1,0 +1,116 @@
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+/* 公共样式 */
+.uiReset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 搜索框 */
+.pyg_search {
+  width: 100%;
+  padding: 5px;
+  height: 45px;
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.pyg_nav {
+  display: flex;
+  height: 45px;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.pyg_nav a {
+  flex: 1;
+  text-align: center;
+  padding-top: 3px;
+  color: black;
+}
+.pyg_nav a span {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  font-size: 20px;
+}
+.pyg_nav a .page_name {
+  font-size: 12px;
+}
+.pyg_view {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+.pyg_view .pv_left {
+  width: .8rem;
+  overflow: scroll;
+}
+.pyg_view .pv_left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pyg_view .pv_left ul li {
+  height: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .14rem;
+}
+.pyg_view .pv_left ul .active {
+  background-color: #fff;
+  border-left: 2px solid #ff9040;
+}
+.pyg_view .pv_right {
+  flex: 1;
+  overflow: scroll;
+  background-color: #fff;
+}
+.pyg_view .pv_right .pr_list .pr_title {
+  height: .4rem;
+  display: flex;
+  align-items: center;
+  font-size: .12rem;
+  color: blue;
+  padding-left: .1rem;
+}
+.pyg_view .pv_right .pr_list .pr_content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pyg_view .pv_right .pr_list .pr_content li {
+  width: 33.33%;
+}
+.pyg_view .pv_right .pr_list .pr_content li a img {
+  width: 70%;
+  margin: 0 auto;
+}
+.pyg_view .pv_right .pr_list .pr_content li a span {
+  color: #000;
+  font-size: .14rem;
+  display: block;
+  text-align: center;
+}
