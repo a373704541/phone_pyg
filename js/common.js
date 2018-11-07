@@ -5,5 +5,11 @@ $(function () {
     $.ajaxSettings.beforeSend = function (xhr, obj) {
         // console.log(obj);
         obj.url = baseUrl + obj.url;
+        // 增加加载样式
+        $("body").addClass("waitIng");
+        console.log(111);
+    }
+    $.ajaxSettings.complete = function(){
+        $("body").removeClass("waitIng");
     }
 })

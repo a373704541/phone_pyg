@@ -1,11 +1,17 @@
 @import "./common.less";
-.pyg_view {
+.view {
+    height: 100%;
+}
+
+.pyg_main {
+    height: 100%;
     display: flex;
     overflow: hidden;
-    height: 100%;
-    .pv_left {
+    .pyg_left {
+        height: 100%;
+        overflow: hidden;
         width: .8rem;
-        overflow: scroll;
+        background-color: #ccc;
         ul {
             .uiReset();
             li {
@@ -13,40 +19,39 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: .14rem;
             }
             .active {
                 background-color: #fff;
-                border-left: 2px solid #ff9040;
+                border-left: 3px solid #909940
             }
         }
     }
-    .pv_right {
-        flex: 1;
+    .pyg_right {
         overflow: scroll;
+        flex: 1;
         background-color: #fff;
         .pr_list {
-            .pr_title {
-                height: .4rem;
+            .pl_title {
+                height: 0.4rem;
+                font-size: .16rem;
+                color: blue;
                 display: flex;
                 align-items: center;
-                font-size: .12rem;
-                color: blue;
-                padding-left: .1rem;
+                padding-left: .05rem;
             }
-            .pr_content {
+            .pl_items {
                 .uiReset();
                 display: flex;
                 flex-wrap: wrap;
                 li {
                     width: 33.33%;
-                    a{
-                        img{
+                    a {
+                        img {
                             width: 70%;
+                            display: block;
                             margin: 0 auto;
                         }
-                        span{
-                            color: #000;
+                        span {
                             font-size: .14rem;
                             display: block;
                             text-align: center;
@@ -57,3 +62,4 @@
         }
     }
 }
+

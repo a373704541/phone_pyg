@@ -30,6 +30,7 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 10;
 }
 .pyg_nav {
   display: flex;
@@ -56,60 +57,91 @@ body {
 .pyg_nav a .page_name {
   font-size: 12px;
 }
-.pyg_view {
-  display: flex;
-  overflow: hidden;
+.waitIng {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.waitIng::before {
+  content: "\f1ce";
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  animation: fa-spin 2s infinite linear;
+  z-index: 1001;
+  font: normal normal normal 40px/1 FontAwesome;
+}
+.waitIng::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #666;
+  opacity: 0.8;
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.view {
   height: 100%;
 }
-.pyg_view .pv_left {
-  width: .8rem;
-  overflow: scroll;
+.pyg_main {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
 }
-.pyg_view .pv_left ul {
+.pyg_main .pyg_left {
+  height: 100%;
+  overflow: hidden;
+  width: .8rem;
+  background-color: #ccc;
+}
+.pyg_main .pyg_left ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.pyg_view .pv_left ul li {
+.pyg_main .pyg_left ul li {
   height: .4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .14rem;
 }
-.pyg_view .pv_left ul .active {
+.pyg_main .pyg_left ul .active {
   background-color: #fff;
-  border-left: 2px solid #ff9040;
+  border-left: 3px solid #909940;
 }
-.pyg_view .pv_right {
-  flex: 1;
+.pyg_main .pyg_right {
   overflow: scroll;
+  flex: 1;
   background-color: #fff;
 }
-.pyg_view .pv_right .pr_list .pr_title {
-  height: .4rem;
+.pyg_main .pyg_right .pr_list .pl_title {
+  height: 0.4rem;
+  font-size: .16rem;
+  color: blue;
   display: flex;
   align-items: center;
-  font-size: .12rem;
-  color: blue;
-  padding-left: .1rem;
+  padding-left: .05rem;
 }
-.pyg_view .pv_right .pr_list .pr_content {
+.pyg_main .pyg_right .pr_list .pl_items {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-.pyg_view .pv_right .pr_list .pr_content li {
+.pyg_main .pyg_right .pr_list .pl_items li {
   width: 33.33%;
 }
-.pyg_view .pv_right .pr_list .pr_content li a img {
+.pyg_main .pyg_right .pr_list .pl_items li a img {
   width: 70%;
+  display: block;
   margin: 0 auto;
 }
-.pyg_view .pv_right .pr_list .pr_content li a span {
-  color: #000;
+.pyg_main .pyg_right .pr_list .pl_items li a span {
   font-size: .14rem;
   display: block;
   text-align: center;
