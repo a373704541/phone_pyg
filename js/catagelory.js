@@ -35,11 +35,11 @@ $(function () {
                 renderLeft();
 
                 /* 初始化左侧数据 */
-                myScroll = new IScroll('.pyg_left');
                
+                console.log(myScroll);
                 localStorage.setItem("cates", JSON.stringify({
                     data: CategorieData,
-                    time: Date.now()
+                    time: Date.now
                 }))
                 renderRight(0)
             }
@@ -48,16 +48,18 @@ $(function () {
     }
     /* 渲染左侧数据 */
     function renderLeft() {
+  
+        console.log(myScroll);
         /* 渲染左侧数据 */
         var htmlStr = template("CategoriesLeftTemp", {
             data: CategorieData
         });
         $(".pyg_left ul").html(htmlStr);
-
+        myScroll = new IScroll(".pyg_left");
     }
     /* 渲染右侧数据 */
     function renderRight(index) {
-        
+
         var htmlStr1 = template("CategoriesRightTemp", {
             data: CategorieData[index].children
         })
@@ -80,8 +82,10 @@ $(function () {
         // 排他思想
         $(this).addClass("active").siblings().removeClass("active");
         // 置顶页面
+        
         myScroll.scrollToElement(this);
-        // 获取index
+
+        // 获取indexss
         var index = $(this).index();
         // console.log(index);
         // 渲染指定页面
@@ -92,14 +96,23 @@ $(function () {
     function localAddress() {
         var localDataStr = localStorage.getItem("cates");
         // 判断是否存在
-        if(!localDataStr){
+        if (!localDataStr) {
             getCategories();
-        }else {
-            var localData =JSON.parse(localDataStr); 
-            CategorieData =localData.data;
-            console.log(1111);
-            renderLeft();
-            renderRight(0);
+        } else {
+            var localData = JSON.parse(localDataStr);
+            if (Date.now - localData.time >= 100000) {
+                console.log("网络存储")
+                getCategories();
+            } else {
+               
+                
+                console.log("本地存储")
+                CategorieData = localData.data;
+                renderLeft();
+                // console.log(myScroll);
+                renderRight(0);
+            }
+
         }
     }
 

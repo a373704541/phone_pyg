@@ -1,0 +1,39 @@
+@import "./common.less";
+.view{
+    background-color: #fff;
+}
+// 商品名字
+.goods_name{
+    font-size: 14px;
+    display: block;
+    color: #000;
+}
+// 商品价钱
+.goods_price{
+    font-size: 20px;
+    color: red;
+    display: block;
+    padding: 5px;
+}
+// 商品参数
+.goods_post_charge{
+    .uiReset();
+    padding: 5px;
+    li{ 
+        padding: 5px 0;
+        display: flex;
+        font-size: 13px;
+        border-bottom: 1px solid #000;
+        span{
+            text-align: left;
+            &:nth-child(1){
+                color: #ccc;
+                flex: 1; 
+            }
+            &:nth-child(2){
+                color: #666;
+                flex: 5;
+            }
+        }
+    }
+}

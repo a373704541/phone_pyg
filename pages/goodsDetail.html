@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="../css/goodsDetail.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <!-- 引入mui ui插件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">导航栏</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+    <div class="view">
+
+    </div>
+</body>
+<!-- 商品详情模板 -->
+<script type="text/html" id="detailTemp">
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data.pics[data.pics.length-1].pics_mid_url}}" /></a></div>
+            {{each data.pics val key}}
+            <div class="mui-slider-item"><a href="#"><img src={{val.pics_mid_url}} /></a></div>
+            {{/each}}
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data.pics[0].pics_mid_url}}" /></a></div>
+           
+        </div>
+        <div class="mui-slider-indicator">
+                {{each data.pics val key}}
+                {{if key==0}}
+                <div class="mui-indicator mui-active"></div>
+                {{/if}}
+                {{if key!=0}}
+                <div class="mui-indicator"></div>
+                {{/if}}
+                {{/each}}
+            </div>
+    </div>
+    <!-- 商品名字 -->
+        <a href="javascript:;" class="goods_name">{{data.goods_name}}</a>
+    <!-- 商品名字 -->
+    <!-- 商品价格 -->
+        <a href="javascript:;" class="goods_price">￥{{data.goods_price}}</a>
+    <!-- 商品价格  -->
+    <!-- 商品参数 -->
+        <ul class="goods_post_charge">
+            <li>
+                <span>已选</span>
+                <span>白色</span>
+            </li>
+            <li>
+                <span>促销</span>
+                <span>是</span>
+            </li>
+            <li>
+                <span>送至</span>
+                <span>上海</span>
+            </li>
+            <li>
+                <span>运费</span>
+                <span>免运费</span>
+            </li>
+        </ul>
+    <!-- 商品参数 -->
+    <!-- 商品选项卡 -->
+    <div class="goods_tap">
+        <div style="padding: 10px 10px;">
+            <div id="segmentedControl" class="mui-segmented-control">
+                <a class="mui-control-item mui-active" href="#item1">
+                    图文详情
+                </a>
+                        <a class="mui-control-item" href="#item2">
+                    规则参数
+                </a>
+            </div>
+            <div>
+                <div id="item1" class="mui-control-content mui-active">
+                    {{#data.goods_introduce}}
+                </div>
+                <div id="item2" class="mui-control-content">
+                        12
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<!-- js文件 -->
+<!-- 引入zepto插件 -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- 引入原生模板 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- 引入mui js 文件  -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入issroll插件 -->
+<script src="../lib/iscroll/iscroll.js"></script>
+<!-- 引入公共js -->
+<script src="../js/common.js"></script>
+<!-- 引入主页 -->
+<script src="../js/goodsDetail.js"></script>
+
+</html>
+<script>
+
+</script>

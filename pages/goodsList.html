@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 样式表 -->
-    <link rel="stylesheet" href="../css/catelogery.css">
+    <link rel="stylesheet" href="../css/goodsList.css">
     <!-- 引入字体样式 -->
     <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
     <!-- 引入mui ui插件 -->
@@ -15,20 +15,12 @@
 </head>
 
 <body>
-    <header class="pyg_search">
-        <div class="mui-input-row mui-search">
-            <input type="search" class="mui-input-clear" placeholder="">
-        </div>
-    </header>
+    <header class="gl_search"></header>
+    <div class="sort"></div>
     <div class="view">
-        <div class="pyg_main">
-            <div class="pyg_left">
-                <ul>
-                </ul>
-            </div>
-           <div class="pyg_right">
-
-           </div>
+        <div>
+            <ul class="gl_list">
+            </ul>
         </div>
     </div>
     <!-- 底部 -->
@@ -55,39 +47,27 @@
         </a>
     </footer>
 </body>
-<!-- 渲染左侧数据 -->
-<script type="text/html" id="CategoriesLeftTemp">
-
-    {{each data val key}}
-            {{if key==0}}
-            <li class="active">{{val.cat_name}}</li>
-            {{/if}}
-            {{if key!=0}}
-            <li>{{val.cat_name}}</li>
-            {{/if}}
-        {{/each}}
+<!-- 渲染商品列表模板 -->
+<script type="text/html" id="searchTemp">
+{{each data val key}}
+        <li href="./goodsDetail.html?goods_id={{val.goods_id}}">
+            <a href="./goodsDetail.html?goods_id={{val.goods_id}}">
+                <div class="gl_left">
+                    <img src="{{val.goods_small_logo}}"
+                        alt="">
+                </div>
+                <div class="gl_right">
+                    <div class="gl_name">
+                        {{val.goods_name}}
+                    </div>
+                    <div class="gl_price">
+                        {{val.goods_price}}
+                    </div>
+                </div>
+            </a>
+        </li>
+{{/each}}
 </script>
-
-<!-- 渲染右侧数据 -->
-    <script type="text/html" id="CategoriesRightTemp">
-        <div>
-        {{each data val key}}
-        <div class="pr_list">
-            <div class="pl_title">{{val.cat_name}}</div>
-                <ul class="pl_items">
-                    {{ each val.children val2 key2}}
-                    <li>
-                        <a href="./goodsList.html?cid={{val2.cat_id}}">
-                            <img src="http://api.pyg.ak48.xyz/{{val2.cat_icon}}" alt="">
-                            <span>{{val2.cat_name}}</span>
-                        </a>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-        {{/each}}
-        </div>
-    </script>
 
 <!-- js文件 -->
 <!-- 引入zepto插件 -->
@@ -101,10 +81,9 @@
 <!-- 引入公共js -->
 <script src="../js/common.js"></script>
 <!-- 引入主页 -->
-<script src="../js/catagelory.js"></script>
-
+<script src="../js/goodsList.js"></script>
 
 </html>
 <script>
-    
+
 </script>

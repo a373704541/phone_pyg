@@ -9,7 +9,12 @@ $(function () {
         $("body").addClass("waitIng");
         console.log(111);
     }
-    $.ajaxSettings.complete = function(){
+    $.ajaxSettings.complete = function () {
         $("body").removeClass("waitIng");
     }
+
+    // 模板
+    template.defaults.imports.imgUrl = "www.baidu.com"
+
+    
 })

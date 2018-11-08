@@ -94,3 +94,40 @@ body {
   top: 0px;
   left: 0px;
 }
+.view {
+  background-color: #fff;
+}
+.goods_name {
+  font-size: 14px;
+  display: block;
+  color: #000;
+}
+.goods_price {
+  font-size: 20px;
+  color: red;
+  display: block;
+  padding: 5px;
+}
+.goods_post_charge {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 5px;
+}
+.goods_post_charge li {
+  padding: 5px 0;
+  display: flex;
+  font-size: 13px;
+  border-bottom: 1px solid #000;
+}
+.goods_post_charge li span {
+  text-align: left;
+}
+.goods_post_charge li span:nth-child(1) {
+  color: #ccc;
+  flex: 1;
+}
+.goods_post_charge li span:nth-child(2) {
+  color: #666;
+  flex: 5;
+}

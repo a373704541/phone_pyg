@@ -1,0 +1,67 @@
+@import "./common.less";
+// 初始化
+body {
+    padding-top: 90px;
+    // position: relative;
+}
+.view{
+    position: relative;
+}
+.gl_search {
+    width: 100%;
+    position: fixed;
+    background-color: royalblue;
+    height: 45px;
+    top: 0px;
+    left: 0px;
+}
+
+.sort {
+    width: 100%;
+    position: fixed;
+    background-color: yellowgreen;
+    height: 45px;
+    top: 45px;
+    left: 0px;
+}
+
+.view {
+    height: 100%;
+    overflow: scroll;
+    .gl_list {
+        overflow: scroll;
+        .uiReset();
+        li {
+            margin-bottom: 5px;
+            a {
+                background-color: #fff;
+                display: flex;
+                .gl_left {
+                    flex: 1;
+                    img{
+                        margin: 0 auto;
+                        width: 70%; 
+                    }
+                }
+                .gl_right {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    overflow: hidden;
+                    .gl_name {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 14px;
+                        color: #000;
+                    }
+                    .gl_price {
+                        font-size: 14px;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

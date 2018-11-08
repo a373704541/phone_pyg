@@ -94,3 +94,67 @@ body {
   top: 0px;
   left: 0px;
 }
+body {
+  padding-top: 90px;
+}
+.view {
+  position: relative;
+}
+.gl_search {
+  width: 100%;
+  position: fixed;
+  background-color: royalblue;
+  height: 45px;
+  top: 0px;
+  left: 0px;
+}
+.sort {
+  width: 100%;
+  position: fixed;
+  background-color: yellowgreen;
+  height: 45px;
+  top: 45px;
+  left: 0px;
+}
+.view {
+  height: 100%;
+  overflow: scroll;
+}
+.view .gl_list {
+  overflow: scroll;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.view .gl_list li {
+  margin-bottom: 5px;
+}
+.view .gl_list li a {
+  background-color: #fff;
+  display: flex;
+}
+.view .gl_list li a .gl_left {
+  flex: 1;
+}
+.view .gl_list li a .gl_left img {
+  margin: 0 auto;
+  width: 70%;
+}
+.view .gl_list li a .gl_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.view .gl_list li a .gl_right .gl_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #000;
+}
+.view .gl_list li a .gl_right .gl_price {
+  font-size: 14px;
+  color: red;
+}
