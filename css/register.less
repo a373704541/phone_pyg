@@ -1,0 +1,35 @@
+@import "./common.less";
+.view{
+    padding: 10px;
+}
+
+/* 验证码 */
+.mui-input-group{
+    .mui-input-row{
+        &:nth-child(2){
+            position: relative;
+            #authCode{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px;
+                // width: 28%;
+                width: auto;
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+        
+    }
+}
+
+/* 登陆注册按钮 */
+.register_login{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    a{
+        width: 49%;
+    }
+}

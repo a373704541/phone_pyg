@@ -95,64 +95,28 @@ body {
   left: 0px;
 }
 .view {
-  height: 100%;
+  padding: 10px;
 }
-.pyg_main {
-  height: 100%;
-  display: flex;
+/* 验证码 */
+.mui-input-group .mui-input-row:nth-child(2) {
+  position: relative;
 }
-.pyg_main .pyg_left {
-  height: 100%;
-  overflow: scroll;
-  width: .8rem;
-  background-color: #ccc;
-}
-.pyg_main .pyg_left ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.pyg_main .pyg_left ul li {
-  font-size: .16rem;
-  height: .4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.pyg_main .pyg_left ul .active {
-  background-color: #fff;
-  border-left: 3px solid #909940;
-}
-.pyg_main .pyg_right {
-  overflow: scroll;
-  flex: 1;
-  background-color: #fff;
-}
-.pyg_main .pyg_right .pr_list .pl_title {
-  height: 0.4rem;
-  font-size: .16rem;
-  color: blue;
-  display: flex;
-  align-items: center;
-  padding-left: .05rem;
-}
-.pyg_main .pyg_right .pr_list .pl_items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-.pyg_main .pyg_right .pr_list .pl_items li {
-  width: 33.33%;
-}
-.pyg_main .pyg_right .pr_list .pl_items li a img {
-  width: 70%;
-  display: block;
-  margin: 0 auto;
-}
-.pyg_main .pyg_right .pr_list .pl_items li a span {
-  font-size: .14rem;
-  display: block;
+.mui-input-group .mui-input-row:nth-child(2) #authCode {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  width: auto;
+  font-size: 14px;
   text-align: center;
+}
+/* 登陆注册按钮 */
+.register_login {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.register_login a {
+  width: 49%;
 }

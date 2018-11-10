@@ -5,6 +5,7 @@ $(function () {
         getFont();
         // getCategories();
         localAddress();
+        eventList();
     }
     // 定义全局变量-分页数据
     var CategorieData;
@@ -35,7 +36,7 @@ $(function () {
                 renderLeft();
 
                 /* 初始化左侧数据 */
-               
+
                 console.log(myScroll);
                 localStorage.setItem("cates", JSON.stringify({
                     data: CategorieData,
@@ -48,8 +49,6 @@ $(function () {
     }
     /* 渲染左侧数据 */
     function renderLeft() {
-  
-        console.log(myScroll);
         /* 渲染左侧数据 */
         var htmlStr = template("CategoriesLeftTemp", {
             data: CategorieData
@@ -77,20 +76,21 @@ $(function () {
         })
     }
 
-    /* 注册tap事件 */
-    $(".pyg_left ul").on("tap", "li", function () {
-        // 排他思想
-        $(this).addClass("active").siblings().removeClass("active");
-        // 置顶页面
-        
-        myScroll.scrollToElement(this);
-
-        // 获取indexss
-        var index = $(this).index();
-        // console.log(index);
-        // 渲染指定页面
-        renderRight(index);
-    })
+    function eventList() {
+        /* 注册tap事件 */
+        $(".pyg_left ul").on("tap", "li", function () {
+            // 排他思想
+            $(this).addClass("active").siblings().removeClass("active");
+            // 置顶页面
+            myScroll.scrollToElement(this);
+            console.log(111);
+            // 获取indexss
+            var index = $(this).index();
+            // console.log(index);
+            // 渲染指定页面
+            renderRight(index);
+        })
+    }
 
     /* 本地存储 */
     function localAddress() {
@@ -104,8 +104,8 @@ $(function () {
                 console.log("网络存储")
                 getCategories();
             } else {
-               
-                
+
+
                 console.log("本地存储")
                 CategorieData = localData.data;
                 renderLeft();

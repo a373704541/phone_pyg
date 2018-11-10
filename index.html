@@ -111,13 +111,13 @@
     <ul class="gl_content">
         {{each val1.goods val2 key2}}
             <li>
-                <a href="javascript:;" class="gl_wrap">
+                <a href="./pages/goodsDetail.html?goods_id={{val2.goods_id}}" class="gl_wrap">
                     <img src="{{val2.goods_small_logo}}"
                         alt="">
                     <p class="gl_text">{{val2.goods_name}}</p>
                     <span class="gl_price">￥{{val2.goods_price}}</span>
                 </a>
-                <a class=" gl_like mui-btn mui-btn-primary mui-btn-outlined">蓝色</a>
+                <a href="./pages/goodsList.html?cid={{val2.cat_id}}" class=" gl_like mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
             </li>
         {{/each}}
     </ul>

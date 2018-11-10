@@ -37,3 +37,33 @@
         }
     }
 }
+// 底部工具
+.pyg_tool{
+    position: fixed;
+    height: 45px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    a{
+        flex: 1;
+        font-size: 13px;
+        &:nth-child(-n+2){
+            span{
+                font-size: 18px;
+            }
+            color: #666;
+            text-align: center;
+            padding-top: 5px;
+            border-right: 1px solid #ccc;
+        }
+        &:nth-last-child(-n+2){
+            // color: #fff;
+            text-align: center;
+            line-height: 45px;
+            color: #fff;
+        }
+    }
+}
