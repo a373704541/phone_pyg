@@ -1,0 +1,218 @@
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding-top: 45px;
+}
+body {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.view {
+  height: 100%;
+  overflow: scroll;
+}
+/* 公共样式 */
+.uiReset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 搜索框 */
+.pyg_search {
+  width: 100%;
+  padding: 5px;
+  height: 45px;
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.pyg_nav {
+  display: flex;
+  height: 45px;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.pyg_nav a {
+  flex: 1;
+  text-align: center;
+  padding-top: 3px;
+  color: black;
+}
+.pyg_nav a span {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+}
+.pyg_nav a .page_name {
+  font-size: 12px;
+  color: #000;
+}
+.waitIng {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.waitIng::before {
+  content: "\f1ce";
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  animation: fa-spin 2s infinite linear;
+  z-index: 1001;
+  font: normal normal normal 40px/1 FontAwesome;
+}
+.waitIng::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #666;
+  opacity: 0.8;
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.view {
+  padding: 0px 10px;
+}
+/* 配送地址 */
+.pyg_address {
+  margin-top: 10px;
+}
+.pyg_address_title {
+  font-size: 13px;
+  color: #666;
+}
+.pyg_address_content {
+  background-color: #fff;
+  display: flex;
+}
+.pyg_address_content .pyg_address_icon {
+  flex: 1;
+  overflow: hidden;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pyg_address_content .pyg_address_default {
+  flex: 5;
+  overflow: hidden;
+}
+.pyg_address_content .pyg_address_default .pyg_address_default_top {
+  font-size: 14px;
+}
+.pyg_address_content .pyg_address_default .pyg_address_default_bottom {
+  font-size: 12px;
+  color: #555;
+}
+/* 总价 */
+.totalPrice {
+  margin-top: 20px;
+}
+.totalPrice .totalPrice_title {
+  font-size: 13px;
+  color: #666;
+}
+.totalPrice .totalPrice_content {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.totalPrice .totalPrice_content .totalPrice_content_price span {
+  color: red;
+}
+.totalPrice .totalPrice_content .totalPrice_content_price span .totalPrice_content_price2 {
+  font-size: 18px;
+}
+.totalPrice .totalPrice_content .createOrder {
+  font-size: 14px;
+}
+/* 订单 */
+.orders {
+  margin-top: 20px;
+}
+.orders .orders_title {
+  font-size: 13px;
+  color: #666;
+}
+.orders .orderList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.orders .orderList li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.orders .orderList li .order_chk_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orders .orderList li .order_chk_wrap .order_chk_btn {
+  position: static;
+  display: flex;
+}
+.orders .orderList li .order_img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orders .orderList li .order_img img {
+  width: 70%;
+}
+.orders .orderList li .order_content_wrap {
+  flex: 4;
+  overflow: hidden;
+}
+.orders .orderList li .order_content_wrap .order_content_wrap_text {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+.orders .orderList li .order_content_wrap .order_content_wrap_price {
+  margin-top: 5px;
+  color: red;
+}
+body {
+  display: none;
+}
+#completeStatus #deleBtn,
+#completeStatus .order_chk_btn,
+#completeStatus #numbtnChk {
+  display: none;
+}
+#completeStatus.editStatus #deleBtn,
+#completeStatus.editStatus .order_chk_btn {
+  display: flex;
+}
+#completeStatus.editStatus #numbtnChk {
+  display: block;
+}

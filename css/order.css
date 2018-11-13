@@ -94,14 +94,42 @@ body {
   top: 0px;
   left: 0px;
 }
-.view {
-  padding: 10px;
-}
-#username,
-#userpwd {
+.pyg_order_title {
   background-color: #fff;
 }
-.register_login a {
-  display: block;
-  margin-top: 15px;
+.pyg_order_content {
+  padding: 20px;
+}
+.pyg_order_content .pyg_order_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.pyg_order_content .pyg_order_list a {
+  padding: 10px;
+  display: flex;
+}
+.pyg_order_content .pyg_order_list a .pyg_order_list_left {
+  flex: 3;
+  color: #666;
+  overflow: hidden;
+}
+.pyg_order_content .pyg_order_list a .pyg_order_list_left .pyg_order_list_left_font {
+  font-size: 13px;
+}
+.pyg_order_content .pyg_order_list a .pyg_order_list_left .pyg_order_list_left_phone {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.pyg_order_content .pyg_order_list a .pyg_order_list_right {
+  flex: 1;
+  font-size: 16px;
+  color: red;
+  text-align: right;
+}
+body {
+  display: none;
 }

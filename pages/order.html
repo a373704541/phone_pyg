@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="../css/order.css">
+    <!-- 引入mui ui插件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">订单</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+    <div class="view">
+        <div class="goods_order_tap">
+            <div class="pyg_order_title">
+                <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <a class="mui-control-item mui-active" href="#item1mobile">
+                        全部
+                    </a>
+                    <a class="mui-control-item" href="#item2mobile">
+                        待付款
+                    </a>
+                    <a class="mui-control-item" href="#item3mobile">
+                        待发货
+                    </a>
+                </div>
+            </div>
+            <div class="pyg_order_content">
+                <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                    <ul class="pyg_order_list">
+
+                    </ul>
+                </div>
+                <div id="item2mobile" class="mui-slider-item mui-control-content">
+                    待开发
+                </div>
+                <div id="item3mobile" class="mui-slider-item mui-control-content">
+                    嗲开发
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script type="text/html" id="orderListTemp">
+    {{each data val key}}
+        <li>
+            <a href="javascript:;">
+                <div class="pyg_order_list_left">
+                    <div class="pyg_order_list_left_font">
+                        订单编号
+                    </div>
+                    <div class="pyg_order_list_left_phone">
+                        {{val.order_number}}
+                    </div>
+                </div>
+                <div class="pyg_order_list_right">
+                    ￥{{val.order_price}}
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<!-- js文件 -->
+<!-- 引入zepto插件 -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- 引入原生模板 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- 引入mui js 文件  -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入公共js -->
+<script src="../js/common.js"></script>
+<!-- 引入主页 -->
+<script src="../js/order.js"></script>
+
+</html>
+<script>
+
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="../css/cars.css">
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <!-- 引入mui ui插件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <title>Document</title>
+</head>
+
+<body id="completeStatus" >
+    <header id="header" class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title">购物车</h1>
+        <button id="editBtn" class="mui-btn mui-btn-blue mui-pull-right mui-btn-outlined">编辑</button>
+        <button id="deleBtn" class="mui-btn mui-btn-blue mui-pull-left mui-btn-outlined">删除</button>
+    </header>
+    <div class="view">
+        <!-- 配送地址 -->
+        <div class="pyg_address">
+            <div class="pyg_address_title">配送地址</div>
+            <div class="pyg_address_content">
+                <div class="pyg_address_icon">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+                <div class="pyg_address_default">
+                    <div class="pyg_address_default_top">默认地址</div>
+                    <div class="pyg_address_default_bottom">中国台湾钓鱼岛</div>
+                </div>
+            </div>
+        </div>
+        <!-- 总价 -->
+        <div class="totalPrice">
+            <div class="totalPrice_title">总价</div>
+            <div class="totalPrice_content">
+                <div class="totalPrice_content_price">
+                    总价
+                    <span>￥<span class="totalPrice_content_price2">2323232</span></span>
+                </div>
+                <a href="javascript:;" class="createOrder">生产订单</a>
+            </div>
+        </div>
+        <!-- 订单 -->
+        <div class="orders">
+            <div class="orders_title">
+                订单
+            </div>
+            <ul class="orderList">
+                
+            </ul>
+        </div>
+</body>
+<script type="text/html" id="orderListTemp">
+    {{each data val key}}
+        <li data-obj="{{val}}">
+            <div class="mui-input-row mui-checkbox order_chk_wrap ">
+                <input name="checkbox1" class="order_chk_btn" value="Item 1" type="checkbox" >
+            </div>
+            <div class="order_img">
+                <img src="{{val.goods_small_logo}}"
+                    alt="">
+            </div>
+            <div class="order_content_wrap">
+                <div class="order_content_wrap_text mui-ellipsis-2">
+                    {{val.goods_name}}
+                </div>
+                <div class="mui-numbox" id="numbtnChk" data-numbox-step="1" data-numbox-min="1" data-numbox-max="{{val.goods_number}}">
+                    <button class="mui-btn mui-btn-numbox-minus" type="button" disabled="">-</button>
+                    <input class="mui-input-numbox" type="number" value="{{val.amount}}">
+                    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                </div>
+                <div class="order_content_wrap_price">
+                    ￥{{val.goods_price}}
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+<!-- js文件 -->
+<!-- 引入zepto插件 -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- 引入原生模板 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- 引入mui js 文件  -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入公共js -->
+<script src="../js/common.js"></script>
+<!-- 引入主页 -->
+<script src="../js/cars.js"></script>
+
+</html>
+<script>
+    
+</script>

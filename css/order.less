@@ -1,0 +1,39 @@
+@import "./common.less";
+.pyg_order_title {
+    background-color: #fff;
+}
+
+.pyg_order_content {
+    padding: 20px;
+    .pyg_order_list {
+        .uiReset();
+        background-color: #fff;
+        a {
+            padding: 10px;
+            display: flex;
+            .pyg_order_list_left {
+                flex: 3;
+                color: #666;
+                overflow: hidden;
+                .pyg_order_list_left_font {
+                    font-size: 13px;
+                }
+                .pyg_order_list_left_phone {
+                    font-size: 15px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
+            .pyg_order_list_right {
+                flex: 1;
+                font-size: 16px;
+                color: red;
+                text-align: right;
+            }
+        }
+    }
+}
+body{
+    display: none;
+}

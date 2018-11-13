@@ -1,0 +1,139 @@
+@import "./common.less";
+.view {
+    padding: 0px 10px;
+}
+
+/* 配送地址 */
+
+.pyg_address {
+    margin-top: 10px;
+    &_title {
+        font-size: 13px;
+        color: #666;
+    }
+    &_content {
+        background-color: #fff;
+        display: flex;
+        .pyg_address_icon {
+            flex: 1;
+            overflow: hidden;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pyg_address_default {
+            flex: 5;
+            overflow: hidden;
+            .pyg_address_default_top {
+                font-size: 14px;
+            }
+            .pyg_address_default_bottom {
+                font-size: 12px;
+                color: #555
+            }
+        }
+    }
+}
+
+/* 总价 */
+
+.totalPrice {
+    margin-top: 20px;
+    .totalPrice_title {
+        font-size: 13px;
+        color: #666;
+    }
+    .totalPrice_content {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        .totalPrice_content_price {
+            span {
+                color: red;
+                .totalPrice_content_price2 {
+                    font-size: 18px;
+                }
+            }
+        }
+        .createOrder {
+            font-size: 14px;
+        }
+    }
+}
+
+/* 订单 */
+
+.orders {
+    margin-top: 20px;
+    .orders_title{
+        font-size: 13px;
+        color: #666;
+    }
+    .orderList {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        .uiReset();
+        background-color: #fff;
+        
+        li {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            .order_chk_wrap {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .order_chk_btn {
+                    position: static;
+                    display: flex;
+                }
+            }
+            .order_img {
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 70%;
+                }
+            }
+            .order_content_wrap {
+                flex: 4;
+                overflow: hidden;
+                .order_content_wrap_text {
+                    font-size: 13px;
+                    color: #666;
+                    margin-bottom: 5px;
+                }
+                .order_content_wrap_price {
+                    margin-top: 5px;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+body {
+    display: none;
+}
+
+#completeStatus{
+    #deleBtn,
+    .order_chk_btn,
+    #numbtnChk
+    {
+        display: none;
+    }
+}
+
+#completeStatus.editStatus {
+    #deleBtn,
+    .order_chk_btn{
+        display: flex;
+    }
+    #numbtnChk
+    {
+        display: block;
+    } 
+}

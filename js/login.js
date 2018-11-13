@@ -16,7 +16,7 @@ $(function () {
         }, function (res) {
             if (res.meta.status == 200) {
                 // 会话存储
-                sessionStorage.setItem("loginMessage", JSON.stringify(res.data));
+                $.setUserInfo(res.data)
                 var goodsDetailUrl = sessionStorage.getItem("goodsDetailUrl");
                 if (goodsDetailUrl) {
                     location.href = goodsDetailUrl;
